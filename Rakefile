@@ -52,7 +52,7 @@ task :clean do |t|
 end
 
 desc "(default) Downloads the latest Epoxy.js docs and builds a new docset"
-task :build => [INDEX] do |t|
+task :build => [PLIST, INDEX] do |t|
   sh "tar --exclude='.DS_Store' -cvzf #{DOCSET}.tgz #{DOCSET}"
 end
 
